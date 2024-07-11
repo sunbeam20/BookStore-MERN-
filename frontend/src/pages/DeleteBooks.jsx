@@ -10,6 +10,7 @@ const DeleteBooks = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const { enqueueSnackbar } = useSnackbar();
+  axios.defaults.withCredentials = true;
   const handleDeleteBook = () => {
     setLoading(true);
     axios
