@@ -19,6 +19,7 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization', 'Access-Control-Allow-Origin'],
     credentials: true  // Allow cookies for authenticated requests (if applicable)
 }));
+app.options('*', cors());
 
 app.get('/', (request, response) => {
     console.log(request)
