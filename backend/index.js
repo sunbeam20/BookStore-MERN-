@@ -13,14 +13,12 @@ app.use(express.json());
 // 1) Allow all origins with default of cors
 // app.use(cors());
 // 2) Allow custom origins
-app.use(
-    cors({
-        origin: 'https://book-store-mern-frontend-seven.vercel.app',
-        methods: ['GET', 'POST', 'PUT', 'DELETE'],
-        allowedHeaders: ['Content-Type'],
-        credentials: true,
-    })
-);
+app.use(cors({
+    origin: 'https://book-store-mern-frontend-seven.vercel.app',  // Replace with your frontend's URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Allowed HTTP methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+    credentials: true  // Allow cookies for authenticated requests (if applicable)
+}));
 
 app.get('/', (request, response) => {
     console.log(request)
