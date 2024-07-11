@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cors({
     origin: '*',  // Replace with your frontend's URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Allowed HTTP methods
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'Access-Control-Allow-Origin'],
     credentials: true  // Allow cookies for authenticated requests (if applicable)
 }));
 
