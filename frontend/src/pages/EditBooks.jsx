@@ -17,7 +17,7 @@ const EditBooks = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://book-store-mern-chi.vercel.app/books/${id}`)
+      .get(`https://bookstore-mern-k2bs.onrender.com/books/${id}`)
       .then((response) => {
         setAuthor(response.data.author);
         setTitle(response.data.title);
