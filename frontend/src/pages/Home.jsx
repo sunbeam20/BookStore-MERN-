@@ -16,7 +16,7 @@ axios.defaults.withCredentials = true;
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://book-store-mern-chi.vercel.app/books`)
+      .get(`https://bookstore-mern-k2bs.onrender.com/books`)
       .then((response) => {
         setBooks(response.data.data);
         setLoading(false);
